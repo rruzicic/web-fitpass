@@ -17,7 +17,7 @@ import util.PersonalConfig;
 
 public class CommentDAO {
 	private List<Comment> comments = new ArrayList<Comment>();
-	private String pathToFile = PersonalConfig.PROJECT_FOLDER_PATH + "\\data\\comments.json";
+	private String pathToFile = "webapps/FitPass/data/comments.json";
 	
 	public CommentDAO() {
 		load();

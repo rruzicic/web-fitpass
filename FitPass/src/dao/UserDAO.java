@@ -1,5 +1,6 @@
 package dao;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -16,9 +17,14 @@ import util.PersonalConfig;
 
 public class UserDAO {
 	private List<User> users;
-	private String pathToFile = PersonalConfig.PROJECT_FOLDER_PATH + "\\data\\users.json";
+	private String pathToFile = "webapps/FitPass/data/users.json";
+	
 	
 	public UserDAO() {
+		File file = new File(pathToFile);
+		System.out.println("user dao");
+		System.out.println(file.exists());
+		System.out.println("Working Directory = " + System.getProperty("user.dir"));
 		users = new ArrayList<User>();
 		load();
 	}

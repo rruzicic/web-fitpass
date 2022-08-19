@@ -5,3 +5,4 @@
 *.class
 
 /src/util/PersonalConfig.java
+/target/
